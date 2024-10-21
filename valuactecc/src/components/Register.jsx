@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
 import Swal from 'sweetalert2';
+
 
 function Register() {
   const [name, setName] = useState('');
@@ -31,38 +31,42 @@ function Register() {
   };
 
   return (
-    <div>
-      <h2>Registro</h2>
-      <form onSubmit={handleRegister}>
-        <input
+    <div className='login-container'>
+      <h2 className='login-title'>Registro</h2>
+      <form className='login-form' onSubmit={handleRegister}>
+        <label className='login-label'>Nombre Completo</label>
+        <input className='login-input'
           type="text"
           placeholder="Nombre Completo"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
-        <input
+        <label className='login-label'>Email</label>
+        <input className='login-input'
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <input
+        <label className='login-label'>contraseña</label>
+        <input className='login-input'
           type="password"
           placeholder="Contraseña"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <input
+        <label className='login-label'>Numero de Teléfono</label>
+        <input className='login-input'
           type="tel"
           placeholder="Número de Teléfono"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           required
         />
-        <button type="submit">Registrar</button>
+        <button type="submit" className='login-button'>Registrar</button>
       </form>
     </div>
   );

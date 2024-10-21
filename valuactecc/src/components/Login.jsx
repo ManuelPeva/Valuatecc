@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react';
+import Swal from 'sweetalert2';
+import '../Login.css';
 
 // eslint-disable-next-line react/prop-types
 function Login({onLogin}) {
@@ -13,36 +15,35 @@ function Login({onLogin}) {
         if(user){
             onLogin(user);
         }else{
-            alert('Usuario o contraseña incorrectos');
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'La contraseña es incorrecta'
+            })
         }
     };
 
     return(
-        <div>
-            <h2>Iniciar Sesión</h2>
-            <form onSubmit={handleLogin}>
-                <input
-                type="email"
-                placeholder='Email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                />
-                <input
+        <div className='login-container'>
+            <h2 className='login-title'>Inicio de Sesión</h2>
+            <form className='login-form' onSubmit={handleLogin}>
+                <label className='login-label'>Email</label>
+                <input className='login-input'
                 type='email'
                 placeholder='Email'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 />
-                <input
+                <label className='login-label'>Contraseña</label>
+                <input className='login-input'
                 type='password'
                 placeholder='Contraseña'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 />
-                <button type='submit'>Entrar</button>
+                <button type='submit' className='login-button'>Iniciar Sesión</button>
             </form>
         </div>
     )
