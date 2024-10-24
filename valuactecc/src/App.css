@@ -42,9 +42,21 @@
 }
 
 .app-nav{
-  padding: 30px;
+  padding: 28px;
 }
 
 .app-p{
   color: black;
+}
+
+.app-h2{
+  color: black;
+  font-size: 38px;
+}
+
+.app-h2-valua{
+  color: #1e2ebc;
+  font-size: 42px;
+  letter-spacing: 0.9px;
+  word-spacing: 0.21em;
 }

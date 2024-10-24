@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -15,6 +15,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         </Routes>
         {user && <p className='app-p'>Bienvenido, {user.email} 😊</p>}
+
         <nav>
           <Link className='app-nav' to="/login">Login</Link>
           <Link className='app-nav' to="/register">Registro</Link>
