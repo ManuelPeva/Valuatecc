@@ -1,0 +1,82 @@
+/* Página general */
+.welcome-page {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el header */
+.welcome-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.welcome-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Asegura que la imagen y el botón estén en extremos opuestos */
+}
+
+/* Estilo de la imagen del logo */
+.logo {
+  display: inline-block;
+}
+
+/* Estilo del botón de logout */
+.welcome-logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: auto;
+}
+
+.welcome-logout-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Contenedor del contenido de bienvenida */
+.welcome-container {
+  margin-top: 80px;
+  text-align: center;
+}
+
+
+.welcome{
+  color:black;
+}
+
+p,h2{
+  color:black;
+}
+
+.bienvenida{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+}
+
+.welcome-p{
+  font-weight:bold;
+  font-size: 24px;
+}
+
+.welcome-h2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(5, 5, 118);
+  font-size: 52px;
+  margin-top: 1px;
+  font-weight: bold;
+}

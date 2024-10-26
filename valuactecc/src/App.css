@@ -60,3 +60,21 @@
   letter-spacing: 0.9px;
   word-spacing: 0.21em;
 }
+
+/*Estilos personalizados para el titulo de la alerta*/
+.swal-title{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/*Estilos personalizados para el texto de la alerta*/
+.swal-text{
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/*Ajuste de padding
+.swal2-popup{
+  padding: 20px;
+}*/

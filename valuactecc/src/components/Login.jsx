@@ -7,7 +7,7 @@ import '../Login.css';
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Hook para redireccionar
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -16,7 +16,20 @@ function Login({ onLogin }) {
 
     if (user) {
       onLogin(user);
-      navigate('/welcome'); // Redirigir a la página de bienvenida
+
+      // Mostrar SweetAlert con el mensaje de bienvenida
+      Swal.fire({
+        title: `<p class="swall-title">Bienvenido, ${user.email} 😊</p>`,
+        icon: 'success',
+        confirmButtonText: 'Continuar',
+        customClass:{
+          title: 'swall-title', //personaliza el titulo 
+          htmlContainer: 'swal-text' //Clase personalizada para el contenido HTML
+        },
+      }).then(() => {
+        // Redirigir a la página de bienvenida después de que el usuario cierre el mensaje
+        navigate('/welcome');
+      });
     } else {
       Swal.fire({
         icon: 'error',
