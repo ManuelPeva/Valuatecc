@@ -51,8 +51,21 @@ function Welcome({ user, onLogout }) {
       <ul>
         <li>
           <a className='welcome-botones' href='#'>Portada</a>
-          <a className='welcome-botones' href='#'>Portada</a>
-          <a className='welcome-botones' href='#'>Portada</a>
+          <a className='welcome-botones' href='#'>Datos</a>
+          <a className='welcome-botones' href='#'>Carac-Terreno</a>
+          <a className='welcome-botones' href='#'>Definiciones</a>
+          <a className='welcome-botones' href='#'>Descrip inmuble</a>
+          <a className='welcome-botones' href='#'>Acabados</a>
+          <a className='welcome-botones' href='#'>Merc inm similares</a>
+          <a className='welcome-botones' href='#'>Comprobables</a>
+          <a className='welcome-botones' href='#'>Mercado terr</a>
+          <a className='welcome-botones' href='#'>i-Espec</a>
+          <a className='welcome-botones' href='#'>Costos</a>
+          <a className='welcome-botones' href='#'>Ingresos</a>
+          <a className='welcome-botones' href='#'>Conclusion</a>
+          <a className='welcome-botones' href='#'>Foto de la casa en Avaluó</a>
+          <a className='welcome-botones' href='#'>Foto de casa en venta</a>
+          <a className='welcome-botones' href='#'>Fotos de terrenos</a>
         </li>
       </ul>
     </div>
