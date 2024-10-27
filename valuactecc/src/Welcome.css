@@ -38,6 +38,7 @@
   cursor: pointer;
   border-radius: 5px;
   margin-left: auto;
+  margin-right: 32px;
 }
 
 .welcome-logout-button:hover {
@@ -98,5 +99,23 @@ p,h2{
 .welcome-botones:hover{
   background-color: rgb(12, 118, 139);
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 3px 2px black;
+}
+
+.welcome-h2-sub{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(5, 5, 118);
+  font-size: 52px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 3px 1px 0px rgb(5, 5, 118);
+  
+}
+
+@media (max-width: 677px) {
+  .welcome-h2-sub {
+    margin-top: 60px; /* Ajusta este valor según sea necesario */
+    font-size: 36px; /* O cualquier ajuste que desees */
+  }
 }
