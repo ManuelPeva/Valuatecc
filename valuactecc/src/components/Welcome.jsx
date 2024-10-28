@@ -33,11 +33,25 @@ function Welcome({ user, onLogout }) {
     return () => clearTimeout(timer); // Limpiar el temporizador cuando se desmonte el componente
   }, []);
 
+
+
   //fin del temporizador
   const handleLogout = () => {
     onLogout(); // limpiar el estado del usuario
+    //Mostrar mensaje de despedida
     navigate("/login"); // redirigir al login
+    Swal.fire({
+      title: 'Adiós',
+      text: '¡Gracias por visitarnos!',
+      icon: 'success',
+      confirmButtonText: 'Cerrar',
+      timer: 2000,
+      timerProgressBar: true,
+    }).then(() => {
+      navigate("/login"); // redirigir al login después de cerrar el alerta
+    });
   };
+
 
   const handleAddButton = () => {
     if (newButtonText) {
