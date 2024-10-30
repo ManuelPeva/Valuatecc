@@ -38,7 +38,8 @@
   cursor: pointer;
   border-radius: 5px;
   margin-left: auto;
-  margin-right: 32px;
+  margin-right: 22px;
+  margin-top: 12px;
 }
 
 .welcome-logout-button:hover {
@@ -103,6 +104,10 @@ p,h2{
   box-shadow: 1px 3px 2px black;
 }
 
+.welcome-li{
+  list-style-type: none;
+}
+
 .welcome-h2-sub{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: rgb(5, 5, 118);
@@ -117,5 +122,62 @@ p,h2{
   .welcome-h2-sub {
     margin-top: 60px; /* Ajusta este valor según sea necesario */
     font-size: 36px; /* O cualquier ajuste que desees */
+  }
+}
+
+
+/*pantalla de carga*/
+.bienvenida {
+  width: 100%;
+  box-sizing: border-box; /* Asegura que los márgenes y padding no excedan el ancho */
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; /* Evita que el contenido desborde */
+}
+
+.welcome-p {
+  font-size: 1.2rem; /* Ajusta el tamaño del texto en móvil */
+  margin: 0;
+}
+
+.welcome-h2 {
+  font-size: 1.8rem; /* Ajusta el tamaño del encabezado en móvil */
+  margin: 10px 0;
+}
+
+.welcome-image {
+  width: 100%; /* La imagen ocupará todo el ancho disponible */
+  max-width: 300px; /* Tamaño máximo para evitar que se desborde */
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Media Query para Tablets */
+@media (min-width: 768px) {
+  .welcome-p {
+    font-size: 1.8rem;
+  }
+
+  .welcome-h2 {
+    font-size: 2.2rem;
+  }
+
+  .welcome-image {
+    max-width: 400px;
+  }
+}
+
+/* Media Query para Pantallas Grandes */
+@media (min-width: 1024px) {
+  .welcome-p {
+    font-size: 2rem;
+  }
+
+  .welcome-h2 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-image {
+    max-width: 500px;
   }
 }

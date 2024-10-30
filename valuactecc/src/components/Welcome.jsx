@@ -8,8 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { AvaluoProvider } from "../AvaluoContext";
 import { Outlet, Link } from "react-router-dom";
- // Ajusta la ruta según la ubicación del archivo
-
+// Ajusta la ruta según la ubicación del archivo
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 function Welcome({ user, onLogout }) {
@@ -33,25 +32,22 @@ function Welcome({ user, onLogout }) {
     return () => clearTimeout(timer); // Limpiar el temporizador cuando se desmonte el componente
   }, []);
 
-
-
   //fin del temporizador
   const handleLogout = () => {
     onLogout(); // limpiar el estado del usuario
     //Mostrar mensaje de despedida
     navigate("/login"); // redirigir al login
     Swal.fire({
-      title: 'Adiós',
-      text: '¡Gracias por visitarnos!',
-      icon: 'success',
-      confirmButtonText: 'Cerrar',
+      title: "Adiós",
+      text: "¡Gracias por visitarnos!",
+      icon: "success",
+      confirmButtonText: "Cerrar",
       timer: 2000,
       timerProgressBar: true,
     }).then(() => {
       navigate("/login"); // redirigir al login después de cerrar el alerta
     });
   };
-
 
   const handleAddButton = () => {
     if (newButtonText) {
@@ -70,22 +66,26 @@ function Welcome({ user, onLogout }) {
           <img src={casaImage} alt="imagen de bienvenida" />
         </div>
       ) : (
-        
         // Vista del Tablero que aparece después de 2 segundos
         <div className="tablero">
-        <header className="welcome-header">
-        <nav className="welcome-nav">
-          <img src={casaImage} alt='logo' width={54} height={35} />
-          <ul className="nav-list">
-            <li>
-              <button className='welcome-logout-button' onClick={handleLogout}>Salir</button>
-            </li>
-          </ul>
-        </nav>
-      </header>
+          <header className="welcome-header">
+            <nav className="welcome-nav">
+              <img src={casaImage} alt="logo" width={54} height={35} />
+              <ul className="nav-list">
+                <li style={{listStyleType:'none'}}>
+                  <button
+                    className="welcome-logout-button"
+                    onClick={handleLogout}
+                  >
+                    Salir
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </header>
           <h2 className="welcome-h2-sub">ValuaTec</h2>
           <ul>
-            <li>
+            <li className="welcome-li">
               <Link className="welcome-botones" to="/portada">
                 Portada
               </Link>
