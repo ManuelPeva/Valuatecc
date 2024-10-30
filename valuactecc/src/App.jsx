@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import {
   BrowserRouter as Router,
@@ -13,7 +14,7 @@ import Welcome from "./components/Welcome";
 
 //import Caract_terreno from './components/carac-terreno';
 //import Comprobables from './components/comprobables';
-
+import Layout from "./components/Layout.jsx" //importa el Layout
 import Datos from "./components/portada";
 import Portada from "./components/portada";
 import { AvaluoProvider } from "./AvaluoContext";
@@ -46,7 +47,6 @@ function App() {
             <Route path="/datos" element={<Datos />} />
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
-            {/* Ruta de bienvenida protegida, solo accesible si el usuario está autenticado */}
             <Route
               path="/welcome"
               element={
@@ -60,7 +60,7 @@ function App() {
           </Routes>
 
           {/* Mostrar los enlaces de login/registro solo si el usuario no está autenticado */}
-          {!user && (
+          {!user ? (
             <nav>
               <Link className="app-nav" to="/login">
                 Login
@@ -69,6 +69,8 @@ function App() {
                 Registro
               </Link>
             </nav>
+          ) : (
+            <hr></hr>
           )}
         </div>
       </Router>

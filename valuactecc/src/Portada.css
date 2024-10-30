@@ -1,0 +1,13 @@
+.alert{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.portada-alineacion{
+    text-align: left;
+}
+
+.table{
+    background-color: rgb(208, 208, 208);
+}

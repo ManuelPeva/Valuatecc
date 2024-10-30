@@ -14,6 +14,14 @@ export const AvaluoProvider = ({ children }) => {
     colonia: '',
     direccion: '',
     imagen:'',
+    titulo:'',
+    calle:'',
+    numero:'',
+    delegacion:'',
+    cp:'',
+    estado:'',
+    dateEvaluo:'',
+    valor:'',
     // Agrega otros campos según necesites
   });
 
