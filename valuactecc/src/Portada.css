@@ -11,3 +11,23 @@
 .table{
     background-color: rgb(208, 208, 208);
 }
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+td{
+ color:black
+}
+
+.text-primary{
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+}

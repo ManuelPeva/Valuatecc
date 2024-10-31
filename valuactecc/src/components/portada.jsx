@@ -1,4 +1,8 @@
-import { useContext } from "react";
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import { useRef } from "react";
+import html2pdf from "html2pdf.js";
+import { useContext, useEffect } from "react";
 import { AvaluoContext } from "../AvaluoContext";
 import '../Portada.css';
 
@@ -6,7 +10,28 @@ import '../Portada.css';
 
 function Portada() {
   const { avaluoData, setAvaluoData } = useContext(AvaluoContext);
-  //navegacion anterior
+  //constate para pdf
+  const pdfRef = useRef();
+
+  //Funcion para generar el pdf
+  const handleGeneratePDF = ()=> {
+    const element = pdfRef.current;
+    html2pdf()
+    .set({
+      margin:1,
+      filename: 'avaluo.pdf',
+      image: {type: 'jpeg', quality: 0.99},
+      html2canvas: {scale: 2},
+      jsPDF: {unit: 'in', format: 'a4', orientation: 'portrait'}
+    })
+    .from(element)
+    .save();
+  };
+  
+  // Guardar en localStorage cada vez que avaluoData cambie
+  useEffect(() => {
+    localStorage.setItem("avaluoData", JSON.stringify(avaluoData));
+  }, [avaluoData]);
 
   // Manejo de la subida de imagen
   const handleImageUpload = (e) => {
@@ -24,6 +49,8 @@ function Portada() {
   // Mostrar y actualizar el campo
   return (
     <div className="container mt-4">
+    {/*Generador de pdf*/}
+    <div ref={pdfRef}>
       <div className="card">
         <div className="card-header">
           <h2 className="text-primary">Folio: {avaluoData.folio}</h2>
@@ -88,6 +115,7 @@ function Portada() {
         <td>{avaluoData.valor}</td>
       </tr>
         </table>
+      </div>
 
       <form>
         <br></br>
@@ -146,24 +174,7 @@ function Portada() {
           </div>
           {/*Terminacion de colonia*/}
 
-          {/*comienzo de calle*/}
-          <div className="col-md">
-            <div className="form-floating mb-3">
-              <input
-                type="text"
-                name="calle"
-                value={avaluoData.calle}
-                onChange={(e) =>
-                  setAvaluoData({ ...avaluoData, calle: e.target.value })
-                }
-                className="form-control"
-                id="floatingInputGrid"
-                placeholder="Folio"
-              />
-              <label>Ingresa la Calle:</label>
-            </div>
-          </div>
-          {/*Terminacion de calle*/}
+          
 
           {/*comienzo de calle*/}
           <div className="col-md">
@@ -321,6 +332,9 @@ function Portada() {
 
         </div>
       </form>
+      <button onClick={handleGeneratePDF} className="btn btn-primary mt-4">
+        Descargar como PDF
+      </button>
       {/* Aquí va el contenido específico de Portada */}
     </div>
   );
