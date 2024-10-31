@@ -70,11 +70,11 @@ function Portada() {
         </div>
 
       <br></br>
-      <input type="file" accept="image/*" onChange={handleImageUpload} />
+      <input className="custom-file-input" type="file" accept="image/*" onChange={handleImageUpload} />
       {avaluoData.imagen && (
         <img
           src={avaluoData.imagen}
-          alt="Imagen post"
+          alt="selecciona una imagen"
           style={{ width: "100%", height: "auto", marginTop: "10px" }}
         />
       )}

@@ -31,3 +31,11 @@ td{
 .text{
     text-align: center;
 }
+
+/* Ocultar el input de tipo file original */
+.custom-file-input {
+    border-radius: 8px;
+    background-color: #0D6EFD;
+    color: white;
+}
+  
