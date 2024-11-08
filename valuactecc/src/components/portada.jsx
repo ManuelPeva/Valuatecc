@@ -5,6 +5,7 @@ import html2pdf from "html2pdf.js";
 import { useContext, useEffect } from "react";
 import { AvaluoContext } from "../AvaluoContext";
 import '../Portada.css';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,6 +13,11 @@ function Portada() {
   const { avaluoData, setAvaluoData } = useContext(AvaluoContext);
   //constate para pdf
   const pdfRef = useRef();
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate('/welcome') //navega de regreso a welcome
+  }
 
   //Funcion para generar el pdf
   const handleGeneratePDF = ()=> {
@@ -82,37 +88,37 @@ function Portada() {
         <br></br>
         <hr></hr>
       <table className="table table-borderless table-hover">
-      <tr>
+      <tr className="border">
       <td className="portada-alineacion">Calle:  </td>
-      <td>{avaluoData.calle} </td>
+      <td className="border">{avaluoData.calle} </td>
       </tr>
       <tr>
       <td className="portada-alineacion">Numero: </td>
-      <td>{avaluoData.numero}</td>
+      <td className="border">{avaluoData.numero}</td>
       </tr>
-      <tr>
+      <tr className="border">
         <td className="portada-alineacion">Colonia:</td>
-        <td>{avaluoData.colonia}</td>
+        <td className="border">{avaluoData.colonia}</td>
       </tr>
-      <tr>
+      <tr className="border">
         <td className="portada-alineacion">Delegación: </td>
-        <td>{avaluoData.delegacion}</td>
+        <td className="border">{avaluoData.delegacion}</td>
       </tr>
-      <tr>
+      <tr className="border">
         <td className="portada-alineacion">Código Postal: </td>
-        <td>{avaluoData.cp}</td>
+        <td className="border">{avaluoData.cp}</td>
       </tr>
-      <tr>
+      <tr className="border">
         <td className="portada-alineacion">Estado y País: </td>
-        <td>{avaluoData.estado}</td>
+        <td className="border">{avaluoData.estado}</td>
       </tr>
-      <tr>
+      <tr className="border">
         <td className="portada-alineacion">Fecha del Evaluó: </td>
-        <td>{avaluoData.dateEvaluo}</td>
+        <td className="border">{avaluoData.dateEvaluo}</td>
       </tr>
-      <tr>
+      <tr className="border">
         <td className="portada-alineacion">Valor concluido: </td>
-        <td>{avaluoData.valor}</td>
+        <td className="border">{avaluoData.valor}</td>
       </tr>
         </table>
       </div>
@@ -336,6 +342,10 @@ function Portada() {
         Descargar como PDF
       </button>
       {/* Aquí va el contenido específico de Portada */}
+      <button onClick={handleGoBack} className="btn btn-primary mt-4 regresar">
+        Regresar a Welcome
+      </button>
+      
     </div>
   );
 }

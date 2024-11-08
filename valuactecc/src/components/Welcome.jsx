@@ -34,9 +34,10 @@ function Welcome({ user, onLogout }) {
 
   //fin del temporizador
   const handleLogout = () => {
-    onLogout(); // limpiar el estado del usuario
-    //Mostrar mensaje de despedida
-    navigate("/login"); // redirigir al login
+    if (onLogout) {
+      onLogout(); // limpiar el estado del usuario
+    }
+    
     Swal.fire({
       title: "Adiós",
       text: "¡Gracias por visitarnos!",
@@ -45,7 +46,7 @@ function Welcome({ user, onLogout }) {
       timer: 2000,
       timerProgressBar: true,
     }).then(() => {
-      navigate("/login"); // redirigir al login después de cerrar el alerta
+      navigate("/login"); // redirigir al login después de cerrar la alerta
     });
   };
 
@@ -63,7 +64,7 @@ function Welcome({ user, onLogout }) {
         <div className="bienvenida">
           <p className="welcome-p">Bienvenido a:</p>
           <h2 className="welcome-h2">ValuaTec</h2>
-          <img src={casaImage} alt="imagen de bienvenida" />
+         {/*<img src={casaImage} alt="imagen de bienvenida" />*/ } 
         </div>
       ) : (
         // Vista del Tablero que aparece después de 2 segundos
@@ -83,13 +84,14 @@ function Welcome({ user, onLogout }) {
               </ul>
             </nav>
           </header>
+          <div className="forzado">
           <h2 className="welcome-h2-sub">ValuaTec</h2>
-          <ul>
+          <ul className="link-list">
             <li className="welcome-li">
               <Link className="welcome-botones" to="/portada">
                 Portada
               </Link>
-              <Link className="welcome-botones" to="/datos">
+              <Link className="welcome-botones" to="/datoss">
                 Datos
               </Link>
               <Link className="welcome-botones" to="/carac-terreno">
@@ -136,6 +138,7 @@ function Welcome({ user, onLogout }) {
               </Link>
             </li>
           </ul>
+          </div>
         </div>
       )}
     </div>

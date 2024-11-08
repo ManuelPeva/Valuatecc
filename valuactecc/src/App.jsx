@@ -15,7 +15,7 @@ import Welcome from "./components/Welcome";
 //import Caract_terreno from './components/carac-terreno';
 //import Comprobables from './components/comprobables';
 import Layout from "./components/Layout.jsx" //importa el Layout
-import Datos from "./components/portada";
+import Datoss from "./components/datoss";
 import Portada from "./components/portada";
 import { AvaluoProvider } from "./AvaluoContext";
 //import conclusion from './components/conclusion';
@@ -36,6 +36,7 @@ function App() {
 
   const handleLogout = () => {
     setUser(null); // Limpiar el usuario
+    console.log("Usuario deslogueado")
   };
 
   return (
@@ -43,8 +44,9 @@ function App() {
       <Router>
         <div>
           <Routes>
+            <Route path="/welcome" element={<Welcome/>}/>
             <Route path="/portada" element={<Portada />} />
-            <Route path="/datos" element={<Datos />} />
+            <Route path="/datoss" element={<Datoss />} />
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route
