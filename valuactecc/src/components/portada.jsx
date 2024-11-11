@@ -19,6 +19,11 @@ function Portada() {
     navigate('/welcome') //navega de regreso a welcome
   }
 
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setAvaluoData({...avaluoData, [name]: value});
+  };
+
   //Funcion para generar el pdf
   const handleGeneratePDF = ()=> {
     const element = pdfRef.current;
@@ -168,8 +173,7 @@ function Portada() {
                 type="text"
                 name="colonia"
                 value={avaluoData.colonia}
-                onChange={(e) =>
-                  setAvaluoData({ ...avaluoData, colonia: e.target.value })
+                onChange={handleChange
                 }
                 className="form-control"
                 id="floatingInputGrid"
@@ -209,7 +213,7 @@ function Portada() {
                 name="numero"
                 value={avaluoData.numero}
                 onChange={(e) =>
-                  setAvaluoData({ ...avaluoData, numero: e.target.value })
+                  setAvaluoData({ ...aavaluoData, numero: e.target.value })
                 }
                 className="form-control"
                 id="floatingInputGrid"

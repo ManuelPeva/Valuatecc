@@ -9,15 +9,16 @@ import {
 } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
-
 import Welcome from "./components/Welcome";
-
+import { AvaluoProvider } from "./AvaluoContext";
 //import Caract_terreno from './components/carac-terreno';
 //import Comprobables from './components/comprobables';
 import Layout from "./components/Layout.jsx" //importa el Layout
+
+//otros componentes
 import Datoss from "./components/datoss";
 import Portada from "./components/portada";
-import { AvaluoProvider } from "./AvaluoContext";
+
 //import conclusion from './components/conclusion';
 //import Costos from './components/costos';
 //import Definiciones from './components/definiciones';
@@ -29,6 +30,8 @@ import { AvaluoProvider } from "./AvaluoContext";
 //import MercInmSimilares from './components/merc-inm-similares';
 //import Mercado_terr from './components/mercado-terr';
 //import Acabados from './components/acabados';
+//
+
 import "./App.css";
 
 function App() {

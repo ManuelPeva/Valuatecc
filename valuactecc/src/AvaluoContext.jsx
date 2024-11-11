@@ -22,11 +22,20 @@ export const AvaluoProvider = ({ children }) => {
     estado:'',
     dateEvaluo:'',
     valor:'',
+    propositoEv:'',
+    usoAvaluo:'',
     // Agrega otros campos según necesites
   });
 
+  const updateAvaluoData = (key, value) => {
+    setAvaluoData((prevData) => ({
+      ...prevData,
+      [key]: value,
+    }));
+  }
+
   return (
-    <AvaluoContext.Provider value={{ avaluoData, setAvaluoData }}>
+    <AvaluoContext.Provider value={{avaluoData, updateAvaluoData, setAvaluoData}}>
       {children}
     </AvaluoContext.Provider>
   );
