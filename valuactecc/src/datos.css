@@ -19,3 +19,7 @@
     padding: 0 16px; /* Añade un padding mínimo para que el contenido no toque los bordes */
     box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
 }
+
+h5{
+    text-align: left;
+}

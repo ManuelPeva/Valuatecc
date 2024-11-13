@@ -24,7 +24,7 @@ function Portada() {
     setAvaluoData({...avaluoData, [name]: value});
   };
 
-  //Funcion para generar el pdf
+//Funcion para generar el pdf
   const handleGeneratePDF = ()=> {
     const element = pdfRef.current;
     html2pdf()
@@ -213,7 +213,7 @@ function Portada() {
                 name="numero"
                 value={avaluoData.numero}
                 onChange={(e) =>
-                  setAvaluoData({ ...aavaluoData, numero: e.target.value })
+                  setAvaluoData({ ...avaluoData, numero: e.target.value })
                 }
                 className="form-control"
                 id="floatingInputGrid"

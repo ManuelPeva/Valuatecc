@@ -39,7 +39,6 @@ function App() {
 
   const handleLogout = () => {
     setUser(null); // Limpiar el usuario
-    console.log("Usuario deslogueado")
   };
 
   return (
