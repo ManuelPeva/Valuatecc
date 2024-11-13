@@ -6,6 +6,7 @@ import { useContext, useEffect } from "react";
 import { AvaluoContext } from "../AvaluoContext";
 import '../Portada.css';
 import { useNavigate } from "react-router-dom";
+import Header from "../header/Header";
 
 
 
@@ -60,6 +61,10 @@ function Portada() {
   // Mostrar y actualizar el campo
   return (
     <div className="container mt-4">
+    <div className="App">
+      <Header/>
+      <br></br>
+    </div>
     {/*Generador de pdf*/}
     <div ref={pdfRef}>
       <div className="card">
@@ -81,7 +86,7 @@ function Portada() {
         </div>
 
       <br></br>
-      <input className="custom-file-input" type="file" accept="image/*" onChange={handleImageUpload} />
+      <input className="custom-file-input " type="file" accept="image/*" onChange={handleImageUpload} />
       {avaluoData.imagen && (
         <img
           src={avaluoData.imagen}

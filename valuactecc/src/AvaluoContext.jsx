@@ -43,6 +43,16 @@ export const AvaluoProvider = ({ children }) => {
     vigilancia:'',
     rba:'',
     tlf:'',
+    terreno:'',
+    colindancia:'',
+    disnorte:'',
+    colinorte:'',
+    dissur:'',
+    colisur:'',
+    diseste:'',
+    colieste:'',
+    disoeste:'',
+    colioeste:'',
     // Agrega otros campos según necesites
   });
 

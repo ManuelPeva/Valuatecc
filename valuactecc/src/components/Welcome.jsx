@@ -94,7 +94,7 @@ function Welcome({ user, onLogout }) {
               <Link className="welcome-botones" to="/datoss">
                 Datos
               </Link>
-              <Link className="welcome-botones" to="/carac-terreno">
+              <Link className="welcome-botones" to="/caracterreno">
                 Carac-Terreno
               </Link>
               <Link className="welcome-botones" to="/definiciones">

@@ -18,6 +18,7 @@ import Layout from "./components/Layout.jsx" //importa el Layout
 //otros componentes
 import Datoss from "./components/datoss";
 import Portada from "./components/portada";
+import Caracterreno from  "./components/caracterreno";
 
 //import conclusion from './components/conclusion';
 //import Costos from './components/costos';
@@ -49,6 +50,8 @@ function App() {
             <Route path="/welcome" element={<Welcome/>}/>
             <Route path="/portada" element={<Portada />} />
             <Route path="/datoss" element={<Datoss />} />
+            <Route path="/caracterreno" element={<Caracterreno />} />
+
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route

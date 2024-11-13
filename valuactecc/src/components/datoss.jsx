@@ -1,6 +1,7 @@
 import "../datos.css";
 import { AvaluoContext } from "../AvaluoContext";
 import { useContext } from "react";
+import Header from "../header/Header";
 
 function datoss() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -10,6 +11,9 @@ function datoss() {
 
   return (
     <div className="container mt-4 ">
+    <Header/>
+    <br></br>
+      
       <div className="alert alert-warning text" role="alert">
         II.- DATOS GENERALES.
       </div>
