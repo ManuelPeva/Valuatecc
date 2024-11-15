@@ -5,3 +5,29 @@
 .indicacion{
     text-align: justify;
 }
+
+
+.bordes{
+    border: 2px 2px;
+    border-color: #0D6DFD;
+}
+
+.bordelef{
+    border-right: 1px;
+    border-color: #0D6DFD;
+}
+
+.borderight{
+    border-left: 1px;
+    border-color: #0D6DFD;
+}
+
+.borderup{
+    border-top: 1px;
+    border: #0D6DFD;
+}
+
+p{
+    text-align: left;
+    font-weight: bold;
+}

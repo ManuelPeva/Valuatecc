@@ -53,6 +53,16 @@ export const AvaluoProvider = ({ children }) => {
     colieste:'',
     disoeste:'',
     colioeste:'',
+    vreferencia:"",
+    adt:"",
+    adc:"",
+    indiviso:"",
+    uadb:"",
+    tyc:"",
+    ndf:"",
+    dh:"",
+    ser:"",
+    caracp:"",
     // Agrega otros campos según necesites
   });
 
