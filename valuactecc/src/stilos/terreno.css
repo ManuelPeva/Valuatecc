@@ -31,3 +31,23 @@ p{
     text-align: left;
     font-weight: bold;
 }
+
+.definiciones{
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 25px;
+}
+
+.definiciones-text{
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color:#0D6DFD
+}
+
+.definiciones2{
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}

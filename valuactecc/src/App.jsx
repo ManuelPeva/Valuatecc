@@ -19,10 +19,10 @@ import Layout from "./components/Layout.jsx" //importa el Layout
 import Datoss from "./components/datoss";
 import Portada from "./components/portada";
 import Caracterreno from  "./components/caracterreno";
-
+import Definiciones from './components/definiciones';
 //import conclusion from './components/conclusion';
 //import Costos from './components/costos';
-//import Definiciones from './components/definiciones';
+
 //import descrip_inmueble from './components/descrip-inmueble';
 //import fotoCasaEvaluo from './components/foto-casa-avaluo';
 //import fotoCasaVenta from './components/foto-casa-venta';
@@ -51,7 +51,7 @@ function App() {
             <Route path="/portada" element={<Portada />} />
             <Route path="/datoss" element={<Datoss />} />
             <Route path="/caracterreno" element={<Caracterreno />} />
-
+            <Route path="/definiciones" element={<Definiciones/>} />
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route
