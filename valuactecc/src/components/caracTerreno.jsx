@@ -62,7 +62,6 @@ function caracterreno() {
 
       <p>AREA DEL TERRENO: {avaluoData.adt}</p>
 
-
       <p>AREA DE CONSTRUCCIÓN: {avaluoData.adc}</p>
 
       <p>INDIVISO: {avaluoData.indiviso}</p>
@@ -79,10 +78,7 @@ function caracterreno() {
 
       <p>SERVIDUMBRE y/o RESTRICCIONES: {avaluoData.ser}</p>
 
-
-
       {/*---------------------------------------------------------------------------------------*/}
-
 
       <p className="indicacion">
         RELLENA LOS CAMPOS PARA COMPLETAR LOS DATOS SUPERIORES
@@ -154,7 +150,6 @@ function caracterreno() {
             </div>
           </div>
 
-
           <p>SUR:</p>
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
@@ -221,7 +216,6 @@ function caracterreno() {
             </div>
           </div>
 
-
           <p>OESTE:</p>
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
@@ -254,7 +248,7 @@ function caracterreno() {
               <label>COLINDANCIAS: </label>
             </div>
           </div>
-          <hr/>
+          <hr />
 
           {/*.........-----------....................------------------------------*/}
 
@@ -273,7 +267,7 @@ function caracterreno() {
               <label>VALOR DE REFERENCIA DEL SUELO: </label>
             </div>
           </div>
-          
+
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
               <input
@@ -290,7 +284,6 @@ function caracterreno() {
             </div>
           </div>
 
-
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
               <input
@@ -306,7 +299,6 @@ function caracterreno() {
               <label>AREA DE VALOR: </label>
             </div>
           </div>
-
 
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
@@ -340,7 +332,6 @@ function caracterreno() {
             </div>
           </div>
 
-
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
               <input
@@ -373,7 +364,6 @@ function caracterreno() {
             </div>
           </div>
 
-
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
               <input
@@ -390,7 +380,6 @@ function caracterreno() {
             </div>
           </div>
 
-          
           <div className="form-group col-md-6">
             <div className="form-floating mb-3">
               <input
@@ -454,8 +443,6 @@ function caracterreno() {
               <label>SERVIDUMBRES Y/O RESTRICCIONES: </label>
             </div>
           </div>
-
-
         </div>
       </form>
     </div>

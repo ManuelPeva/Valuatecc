@@ -100,7 +100,7 @@ function Welcome({ user, onLogout }) {
               <Link className="welcome-botones" to="/definiciones">
                 Definiciones
               </Link>
-              <Link className="welcome-botones" to="/descrip-inmueble">
+              <Link className="welcome-botones" to="/descripcion">
                 Descrip Inmueble
               </Link>
               <Link className="welcome-botones" to="/acabados">

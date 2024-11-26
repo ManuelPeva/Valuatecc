@@ -23,7 +23,7 @@ import Definiciones from './components/definiciones';
 //import conclusion from './components/conclusion';
 //import Costos from './components/costos';
 
-//import descrip_inmueble from './components/descrip-inmueble';
+import Descripcion from './components/descripcion';
 //import fotoCasaEvaluo from './components/foto-casa-avaluo';
 //import fotoCasaVenta from './components/foto-casa-venta';
 //import i_espec from './components/i-espec';
@@ -52,6 +52,7 @@ function App() {
             <Route path="/datoss" element={<Datoss />} />
             <Route path="/caracterreno" element={<Caracterreno />} />
             <Route path="/definiciones" element={<Definiciones/>} />
+            <Route path="/descripcion" element={<Descripcion/>} />
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route
