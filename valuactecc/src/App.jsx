@@ -28,9 +28,9 @@ import Descripcion from './components/descripcion';
 //import fotoCasaVenta from './components/foto-casa-venta';
 //import i_espec from './components/i-espec';
 //import Ingresos from './components/ingresos'
-//import MercInmSimilares from './components/merc-inm-similares';
+import Similares from './components/Similares';
 //import Mercado_terr from './components/mercado-terr';
-//import Acabados from './components/acabados';
+import Acabados from './components/acabados';
 //
 
 import "./App.css";
@@ -53,6 +53,8 @@ function App() {
             <Route path="/caracterreno" element={<Caracterreno />} />
             <Route path="/definiciones" element={<Definiciones/>} />
             <Route path="/descripcion" element={<Descripcion/>} />
+            <Route path="/similares" element={<Similares/>} />
+            <Route path="/acabados" element={<Acabados/>} />
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route
