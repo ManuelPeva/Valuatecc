@@ -12,8 +12,9 @@ import Register from "./components/Register";
 import Welcome from "./components/Welcome";
 import { AvaluoProvider } from "./AvaluoContext";
 //import Caract_terreno from './components/carac-terreno';
-//import Comprobables from './components/comprobables';
+import Comprobables from './components/comprobables';
 import Layout from "./components/Layout.jsx" //importa el Layout
+
 
 //otros componentes
 import Datoss from "./components/datoss";
@@ -55,6 +56,7 @@ function App() {
             <Route path="/descripcion" element={<Descripcion/>} />
             <Route path="/similares" element={<Similares/>} />
             <Route path="/acabados" element={<Acabados/>} />
+            <Route path="/comprobables" element={<Comprobables/>} />
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
             <Route

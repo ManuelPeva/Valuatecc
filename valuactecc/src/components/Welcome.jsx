@@ -67,6 +67,7 @@ function Welcome({ user, onLogout }) {
          {/*<img src={casaImage} alt="imagen de bienvenida" />*/ } 
         </div>
       ) : (
+        
         // Vista del Tablero que aparece después de 2 segundos
         <div className="tablero">
           <header className="welcome-header">
@@ -111,30 +112,6 @@ function Welcome({ user, onLogout }) {
               </Link>
               <Link className="welcome-botones" to="/comprobables">
                 Comprobables
-              </Link>
-              <Link className="welcome-botones" to="/mercado-terr">
-                Mercado Terr
-              </Link>
-              <Link className="welcome-botones" to="/i-espec">
-                i-Espec
-              </Link>
-              <Link className="welcome-botones" to="/costos">
-                Costos
-              </Link>
-              <Link className="welcome-botones" to="/ingresos">
-                Ingresos
-              </Link>
-              <Link className="welcome-botones" to="/conclusion">
-                Conclusión
-              </Link>
-              <Link className="welcome-botones" to="/foto-casa-avaluo">
-                Foto de la casa en Avaluó
-              </Link>
-              <Link className="welcome-botones" to="/foto-casa-venta">
-                Foto de casa en venta
-              </Link>
-              <Link className="welcome-botones" to="/fotos-terrenos">
-                Fotos de terrenos
               </Link>
             </li>
           </ul>
