@@ -1,4 +1,25 @@
+/* App.css */
 
+/* Aseguramos que el contenido principal no se superponga con el sidebar */
+.app-container {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 250px; /* Ajusta esto dependiendo del ancho del sidebar */
+  padding: 20px;
+  width: 100%;
+}
+
+/* Hacer el layout responsivo */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 200px; /* Ajusta el margen para dispositivos más pequeños */
+  }
+}
+
+
+/*terminacion de sidebar*/
 #root {
   max-width: 1280px;
   margin: 0 auto;

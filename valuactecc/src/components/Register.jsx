@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 function Register() {
@@ -32,9 +33,11 @@ function Register() {
 
   return (
     <div className='login-container'>
-      <h2 className='login-title'>Registro</h2>
+      
       <form className='login-form' onSubmit={handleRegister}>
-        <label className='login-label'>Nombre Completo</label>
+      <h2 className='login-title'>Registro</h2>
+      <br></br>
+        <label className='login-label'></label>
         <input className='login-input'
           type="text"
           placeholder="Nombre Completo"
@@ -42,7 +45,7 @@ function Register() {
           onChange={(e) => setName(e.target.value)}
           required
         />
-        <label className='login-label'>Email</label>
+        <label className='login-label'></label>
         <input className='login-input'
           type="email"
           placeholder="Email"
@@ -50,7 +53,7 @@ function Register() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <label className='login-label'>contraseña</label>
+        <label className='login-label'></label>
         <input className='login-input'
           type="password"
           placeholder="Contraseña"
@@ -58,7 +61,7 @@ function Register() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <label className='login-label'>Numero de Teléfono</label>
+        <label className='login-label'></label>
         <input className='login-input'
           type="tel"
           placeholder="Número de Teléfono"
@@ -67,6 +70,10 @@ function Register() {
           required
         />
         <button type="submit" className='login-button'>Registrar</button>
+        <p></p>
+        <Link to="/login" className="register-link">
+        Ya tengo una cuenta
+      </Link>
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import Sidebar from "./Sidebar";
 import {
   BrowserRouter as Router,
   Route,
@@ -48,42 +49,32 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/welcome" element={<Welcome/>}/>
+            {/* Ruta por defecto que redirige a login si no hay usuario autenticado */}
+            <Route
+              path="/"
+              element={user ? <Navigate to="/welcome" /> : <Navigate to="/login" />}
+            />
+
+            <Route path="/welcome" element={<Welcome />} />
             <Route path="/portada" element={<Portada />} />
             <Route path="/datoss" element={<Datoss />} />
             <Route path="/caracterreno" element={<Caracterreno />} />
-            <Route path="/definiciones" element={<Definiciones/>} />
-            <Route path="/descripcion" element={<Descripcion/>} />
-            <Route path="/similares" element={<Similares/>} />
-            <Route path="/acabados" element={<Acabados/>} />
-            <Route path="/comprobables" element={<Comprobables/>} />
+            <Route path="/definiciones" element={<Definiciones />} />
+            <Route path="/descripcion" element={<Descripcion />} />
+            <Route path="/similares" element={<Similares />} />
+            <Route path="/acabados" element={<Acabados />} />
+            <Route path="/comprobables" element={<Comprobables />} />
             <Route path="/login" element={<Login onLogin={setUser} />} />
             <Route path="/register" element={<Register />} />
+
+            {/* Página de bienvenida, solo accesible si hay un usuario */}
             <Route
               path="/welcome"
               element={
-                user ? (
-                  <Welcome user={user} onLogout={handleLogout} />
-                ) : (
-                  <Navigate to="/login" />
-                )
+                user ? <Welcome user={user} onLogout={handleLogout} /> : <Navigate to="/login" />
               }
             />
           </Routes>
-
-          {/* Mostrar los enlaces de login/registro solo si el usuario no está autenticado */}
-          {!user ? (
-            <nav>
-              <Link className="app-nav" to="/login">
-                Login
-              </Link>
-              <Link className="app-nav" to="/register">
-                Registro
-              </Link>
-            </nav>
-          ) : (
-            <hr></hr>
-          )}
         </div>
       </Router>
     </AvaluoProvider>

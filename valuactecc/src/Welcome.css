@@ -1,3 +1,7 @@
+css welcome 
+
+
+
 /* Página general */
 .welcome-page {
   margin: 0;
@@ -16,35 +20,40 @@
   padding: 10px 20px;
   z-index: 1000;
 }
-
 .welcome-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Asegura que la imagen y el botón estén en extremos opuestos */
+  display: flex; /* Hacemos que los elementos dentro de 'nav' se alineen horizontalmente */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: space-between; /* Asegura que los elementos estén distribuidos y no se solapen */
+  padding: 10px 20px; /* Agrega algo de espacio alrededor */
 }
 
+.welcome-nav img {
+  /* Puedes ajustar estos valores según lo que necesites */
+  margin-right: 20px; /* Espacio entre la imagen y el Sidebar */
+}
+
+.nav-list {
+  display: flex; /* Hace que los elementos de la lista se alineen en fila */
+  justify-content: flex-end; /* Alinea el Sidebar a la derecha */
+  margin-bottom: 84px;
+  margin-right: 42px;
+}
+
+.nav-list li {
+  display: flex; /* Si tienes más elementos en el futuro */
+}
+
+.sidebar {
+  /* Ajustes adicionales para el Sidebar */
+  flex-shrink: 0; /* Evita que el Sidebar se reduzca en tamaño */
+}
 /* Estilo de la imagen del logo */
 .logo {
   display: inline-block;
 }
 
 /* Estilo del botón de logout */
-.welcome-logout-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: 22px;
-  margin-top: 12px;
-}
 
-.welcome-logout-button:hover {
-  background-color: #d32f2f;
-}
 
 /* Contenedor del contenido de bienvenida */
 .welcome-container {
@@ -248,4 +257,16 @@ p,h2{
   .welcome-image {
     max-width: 500px;
   }
+}
+
+
+.visually{
+  margin-top: 82px;
+  color: #3498DB;
+  text-align: center;
+}
+
+.coming{
+  font-weight: bold;
+  font-size: 32px;
 }

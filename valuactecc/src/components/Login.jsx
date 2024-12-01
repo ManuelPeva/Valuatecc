@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../Login.css';
 
 // eslint-disable-next-line react/prop-types
@@ -41,9 +41,10 @@ function Login({ onLogin }) {
 
   return (
     <div className="login-container">
-      <h2 className="login-title">Inicio de Sesión</h2>
       <form className="login-form" onSubmit={handleLogin}>
-        <label className="login-label">Email</label>
+      <h2 className="login-title">Inicio de Sesión</h2>
+      <br></br>
+        <label className="login-label"></label>
         <input
           className="login-input"
           type="email"
@@ -52,7 +53,7 @@ function Login({ onLogin }) {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <label className="login-label">Contraseña</label>
+        <label className="login-label"></label>
         <input
           className="login-input"
           type="password"
@@ -64,6 +65,12 @@ function Login({ onLogin }) {
         <button type="submit" className="login-button">
           Iniciar Sesión
         </button>
+        <p></p>
+        <Link to="/register" className="register-link">
+        Crear cuenta
+      </Link>
+       
+       
       </form>
     </div>
   );

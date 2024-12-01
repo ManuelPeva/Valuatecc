@@ -1,61 +1,4 @@
 
-.login-container{
-    height: auto;
-    width: auto;
-    margin: auto;
-    padding: auto;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-
-.login-title{
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    text-decoration: double;
-    font-size: 32px;
-   
-}
-
-.login-form{
-    display: flex;
-    flex-direction: column;
-}
-
-.login-input{
-    padding: 10px;
-    margin-bottom: 25px;
-    border: 4px solid #2883e3;
-    border-radius: 12px;
-    background-color: white;
-    color: black;
-}
-
-.login-label{
-    color: black;
-    text-align: left;
-}
-
-.login-button{
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 25px;
-}
-
-.login-button:hover{
-    background-color: #0056b3;
-}
-
 
 body {
     margin: 0;
@@ -64,3 +7,124 @@ body {
     min-width: 320px;
     min-height: 100vh;
   }
+
+
+  /* Background: Image or Video */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.homify.com/v1443654352/p/photo/image/960352/Imativa_Casa_Carrasco_0013.jpg') no-repeat center center/cover;
+    /* Replace the URL with your image/video source */
+}
+
+.login-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure video stays behind content */
+    opacity: 0.7; /* Optional: transparency for better readability */
+}
+
+/* Login Form Styles */
+.login-title {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Desenfoque para efecto de cristal */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+    
+}
+
+.login-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.login-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: rgba(242, 242, 242, 0.523);
+    
+}
+
+.register-link {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #145aa4;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #dce7f3;
+    text-decoration: underline;
+}
+
+
+.login-input:focus{
+    outline: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .login-input {
+        font-size: 0.9rem;
+    }
+
+    .login-button {
+        font-size: 0.9rem;
+    }
+}

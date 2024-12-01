@@ -4,11 +4,15 @@ import "../Welcome.css";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import casaImage from "../assets/casa.png";
+import muyPronto from "../assets/3.png";
+import muyPronto2 from "../assets/4.png"
+import muyPronto3 from "../assets/5.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { AvaluoProvider } from "../AvaluoContext";
 import { Outlet, Link } from "react-router-dom";
 // Ajusta la ruta según la ubicación del archivo
+import Sidebar from "../Sidebar";
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 function Welcome({ user, onLogout }) {
@@ -37,13 +41,13 @@ function Welcome({ user, onLogout }) {
     if (onLogout) {
       onLogout(); // limpiar el estado del usuario
     }
-    
+
     Swal.fire({
       title: "Adiós",
       text: "¡Gracias por visitarnos!",
       icon: "success",
       confirmButtonText: "Cerrar",
-      timer: 2000,
+      timer: 1000,
       timerProgressBar: true,
     }).then(() => {
       navigate("/login"); // redirigir al login después de cerrar la alerta
@@ -61,62 +65,98 @@ function Welcome({ user, onLogout }) {
     <div className="welcome-page">
       {showWelcome ? (
         // Vista de Bienvenida
-        <div className="bienvenida">
-          <p className="welcome-p">Bienvenido a:</p>
-          <h2 className="welcome-h2">ValuaTec</h2>
-         {/*<img src={casaImage} alt="imagen de bienvenida" />*/ } 
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={{ height: "100vh" }}
+        >
+          <div className="spinner-grow text-primary" role="status">
+            <br></br>
+            <span className="visually-hidden">Cargando...</span>
+            <br></br>
+            <span className="visually">Cargando...</span>
+          </div>
         </div>
       ) : (
-        
         // Vista del Tablero que aparece después de 2 segundos
+
         <div className="tablero">
+          {/* Aquí va el contenido principal */}
+
           <header className="welcome-header">
             <nav className="welcome-nav">
               <img src={casaImage} alt="logo" width={54} height={35} />
               <ul className="nav-list">
-                <li style={{listStyleType:'none'}}>
-                  <button
-                    className="welcome-logout-button"
-                    onClick={handleLogout}
-                  >
-                    Salir
-                  </button>
+                <li style={{ listStyleType: "none" }}>
+                  <Sidebar onLogout={handleLogout} />
                 </li>
               </ul>
             </nav>
           </header>
+
           <div className="forzado">
-          <h2 className="welcome-h2-sub">ValuaTec</h2>
-          <ul className="link-list">
-            <li className="welcome-li">
-              <Link className="welcome-botones" to="/portada">
-                Portada
-              </Link>
-              <Link className="welcome-botones" to="/datoss">
-                Datos
-              </Link>
-              <Link className="welcome-botones" to="/caracterreno">
-                Carac-Terreno
-              </Link>
-              <Link className="welcome-botones" to="/definiciones">
-                Definiciones
-              </Link>
-              <Link className="welcome-botones" to="/descripcion">
-                Descrip Inmueble
-              </Link>
-              <Link className="welcome-botones" to="/acabados">
-                Acabados
-              </Link>
-              <Link className="welcome-botones" to="/similares">
-                Merc Inm Similares
-              </Link>
-              <Link className="welcome-botones" to="/comprobables">
-                Comprobables
-              </Link>
-            </li>
-          </ul>
+          <h2 className="coming">COMING SOON</h2>
+            <div className="card mb-3">
+              <img src={muyPronto2} className="card-img-top" alt="#"></img>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <p className="card-text">
+                  <small className="text-body-secondary">
+                    Last updated 3 mins ago
+                  </small>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+
+
+          
+         
+            <div className="card mb-3">
+              <img src={muyPronto} className="card-img-top" alt="#"></img>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <p className="card-text">
+                  <small className="text-body-secondary">
+                    Last updated 3 mins ago
+                  </small>
+                </p>
+              </div>
+            </div>
+          
+
+
+         
+            <div className="card mb-3">
+              <img src={muyPronto3} className="card-img-top" alt="#"></img>
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+                <p className="card-text">
+                  <small className="text-body-secondary">
+                    Last updated 3 mins ago
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          
+
       )}
     </div>
   );
