@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../Welcome.css";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import casaImage from "../assets/casa.png";
+import casaImage from "../assets/logol.jpg";
 import muyPronto from "../assets/3.png";
 import muyPronto2 from "../assets/4.png"
 import muyPronto3 from "../assets/5.png"

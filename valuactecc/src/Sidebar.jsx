@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = ({ onLogout }) => {
-  const [isOpen, setIsOpen] = useState(false); // Estado para manejar la visibilidad del sidebar
+  const [isOpen, setIsOpen] = useState(true); // Estado para manejar la visibilidad del sidebar
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen); // Cambia entre abierto y cerrado
