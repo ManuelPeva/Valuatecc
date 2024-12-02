@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './Header.css'
-import { NavLink } from 'react-router-dom';
+import icono from "../assets/logol.jpg";
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false)
     const [showMenuItems, setShowMenuItems] = useState(false)
 
@@ -18,19 +20,15 @@ function Header() {
 
 
   return (
-    <nav className='nav-bar'>
-      <NavLink to="/welcome" className='title'>Valuatec</NavLink>
-      <div className='menu' onClick={handleMenuOpen}>
-        <span className='line'></span>
-        <span className='line'></span>
-      </div>
-      <ul className={`list ${menuOpen ? "open" : ""}`}>
-        <li className='nav-item'>
-       <NavLink to="/welcome" className='nav-text'>volver</NavLink>
-        </li>
-        
-      </ul>
-    </nav>
+    <nav className="nav-bar">
+    <button 
+      className="back-button" 
+      onClick={() => navigate(-1)} // Regresa a la página anterior
+    >
+      <img className='image' src={icono} alt="logo" width={54} height={35} />
+    </button>
+    <NavLink to="/welcome" className="title">Volver</NavLink>
+  </nav>
   )
 }
 
