@@ -98,15 +98,13 @@ function Welcome({ user, onLogout }) {
             <div className="card mb-3">
               <img src={muyPronto2} className="card-img-top" alt="#"></img>
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Reportes</h5>
                 <p className="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                Proveen una visión detallada de los logros, retos y tareas realizadas durante la semana. Suelen incluir métricas clave, avances de proyectos, y áreas de mejora inmediata para garantizar un seguimiento ágil y efectivo.
                 </p>
                 <p className="card-text">
                   <small className="text-body-secondary">
-                    Last updated 3 mins ago
+                    Muy pronto
                   </small>
                 </p>
               </div>
@@ -119,15 +117,13 @@ function Welcome({ user, onLogout }) {
             <div className="card mb-3">
               <img src={muyPronto} className="card-img-top" alt="#"></img>
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Recibe alertas de desempeño</h5>
                 <p className="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Obtén alertas acerca de tu desempeño y consejos de como mejorar tus labores semanales, mensuales y anuales.
                 </p>
                 <p className="card-text">
                   <small className="text-body-secondary">
-                    Last updated 3 mins ago
+                    Muy pronto
                   </small>
                 </p>
               </div>
@@ -139,19 +135,18 @@ function Welcome({ user, onLogout }) {
             <div className="card mb-3">
               <img src={muyPronto3} className="card-img-top" alt="#"></img>
               <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title">Ubicaciones mas precisas con un solo clic</h5>
                 <p className="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  Olvídate de digitar todos los datos de la colonia, mejor señala en el mapa y deja que los datos se llenen solos
                 </p>
                 <p className="card-text">
                   <small className="text-body-secondary">
-                    Last updated 3 mins ago
+                    Muy pronto
                   </small>
                 </p>
               </div>
             </div>
+            <span className="inset">®Valuatec</span>
           </div>
 
 
