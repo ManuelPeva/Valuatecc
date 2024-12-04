@@ -1,0 +1,7 @@
+{
+    "appId": "com.miempresa.miapp",
+    "appName": "Valuatec",
+    "webDir": "build",
+    "bundledWebRuntime": false
+  }
+  
